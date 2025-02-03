@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF862727),
-        title: Text('ICT Flutter', style: TextStyle(color: Colors.white)),
+        title: Text('ICT Flutter 222', style: TextStyle(color: Colors.white)),
         centerTitle: true,
         actions: [
           IconButton(
