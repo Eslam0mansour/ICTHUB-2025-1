@@ -5,61 +5,41 @@ import 'package:flutter/material.dart';
 // - Column & Row
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
+  SecondScreen({super.key});
 
+  final List<String> myList = [
+    'eslam',
+    'ahmed',
+    'mohamed 1',
+    'ali 1',
+    'mohamed 2',
+    'ali 2',
+    'mohamed 3',
+    'ali 3',
+    'mohamed 4',
+    'ali 4',
+    'mohamed 5',
+    'ali 5',
+    'mohamed 6',
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          // alignment: AlignmentDirectional.center, // align the child
-          clipBehavior: Clip.antiAlias, // crop the image border radius
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(16),
-              bottomRight: Radius.circular(36),
-            ),
-            color: Colors.teal,
-          ),
-          width: 300,
-          height: 300,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                "Who Am I?",
+        child: SizedBox(
+          height: 400,
+          child: ListView.builder(
+            itemCount: myList.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Text(
+                myList[index],
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: Colors.blue,
                 ),
-              ),
-              Text(
-                "Flutter Developer",
-                style: TextStyle(
-                  decoration: TextDecoration.underline,
-                ),
-              ),
-              Row(
-                children: [
-                  Container(
-                    clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        16,
-                      ),
-                    ),
-                    padding: EdgeInsets.all(
-                      8,
-                    ),
-                    width: 100,
-                    height: 100,
-                    child: Image.network(
-                      "https://cdn-icons-gif.flaticon.com/17905/17905521.gif",
-                    ),
-                  ),
-                ],
-              ),
-            ],
+              );
+            },
           ),
         ),
       ),
