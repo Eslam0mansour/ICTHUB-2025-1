@@ -89,6 +89,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text("Register"),
                     ),
                   ),
+                 SizedBox(
+                    height: 20,
+                  ),
                 ],
               ),
             ),
