@@ -1,6 +1,4 @@
-import 'package:first/grid_and_stack.dart';
-import 'package:first/home_screen.dart';
-import 'package:first/second_screen.dart';
+import 'package:first/screens/second_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +12,7 @@ class IctApp extends StatelessWidget {
   Widget build(context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GridAndStackView(),
+      home: SecondScreen(),
     );
   }
 }
