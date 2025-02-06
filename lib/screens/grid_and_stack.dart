@@ -45,12 +45,12 @@ class GridAndStackView extends StatelessWidget {
                     : 3,
             crossAxisSpacing: 20,
             mainAxisSpacing: 2,
-            // mainAxisExtent: 100,
-            childAspectRatio: 4 / 4, // crossAxis : mainAxis => width:height
+            childAspectRatio: 4 / 4,
           ),
           itemCount: myList.length,
           itemBuilder: (context, index) {
             return Container(
+              padding: EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 color: Colors.teal,
                 borderRadius: BorderRadius.circular(8.0),
