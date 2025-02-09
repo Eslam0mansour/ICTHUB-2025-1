@@ -1,3 +1,4 @@
+import 'package:first/authentication/login_screen.dart';
 import 'package:first/text_field_tutorial.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class IctApp extends StatelessWidget {
   Widget build(context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TextFieldTutorialView(),
+      home: LoginScreen(),
     );
   }
 }
