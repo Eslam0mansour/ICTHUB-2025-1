@@ -1,6 +1,7 @@
+import 'package:first/authentication/auth_cubit/auth_cubit.dart';
 import 'package:first/authentication/login_screen.dart';
-import 'package:first/text_field_tutorial.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(IctApp());
@@ -11,9 +12,12 @@ class IctApp extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+    return BlocProvider(
+      create: (context) => AuthCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: LoginScreen(),
+      ),
     );
   }
 }
